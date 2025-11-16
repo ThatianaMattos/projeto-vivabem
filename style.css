@@ -1,1 +1,242 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./img/bannerHeader.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header .box-header {
+  margin-top: 30px;
+  width: 80%;
+  height: 10vh;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+}
+header .box-header nav {
+  width: 40%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header .box-header nav a {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.box-banner {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.box-banner .box-titulo {
+  height: 60vh;
+}
+.box-banner .box-titulo h2 {
+  font-size: 2.7rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #1173d4 0%, #33cc73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* Seção Exames de Rotina */
+.secao-exames {
+  width: 100%;
+  min-height: 60vh;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f7ff; /* fundo clarinho parecido com o figma */
+}
+.secao-exames .box-exames-titulo {
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.secao-exames .box-exames-titulo .tag-exames {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: linear-gradient(to right, #4247a2 0%, #33cc73 100%);
+  margin-bottom: 10px;
+}
+.secao-exames .box-exames-titulo h3 {
+  font-size: 1.8rem;
+  color: #1f2933;
+  margin-bottom: 10px;
+}
+.secao-exames .box-exames-titulo p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+.secao-exames .cards-exames {
+  width: 80%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.secao-exames .cards-exames .card-exame {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+.secao-exames .cards-exames .card-exame img {
+  width: 40px;
+  height: 40px;
+}
+.secao-exames .cards-exames .card-exame h4 {
+  font-size: 1.1rem;
+  color: #4247a2;
+}
+.secao-exames .cards-exames .card-exame p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* Responsivo para a seção de exames */
+@media (min-width: 900px) {
+  .secao-exames .cards-exames {
+    flex-direction: row;
+  }
+  .secao-exames .cards-exames .card-exame {
+    flex: 1;
+  }
+}
+/* Seções de Prevenção - base */
+.secao-prevencao {
+  width: 100%;
+  padding: 40px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.secao-prevencao .box-prevencao-titulo {
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.secao-prevencao .box-prevencao-titulo .tag-prevencao {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.secao-prevencao .box-prevencao-titulo h3 {
+  font-size: 1.8rem;
+  color: #1f2933;
+  margin-bottom: 10px;
+}
+.secao-prevencao .box-prevencao-titulo p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+.secao-prevencao .cards-prevencao {
+  width: 80%;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.secao-prevencao .card-prevencao {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.secao-prevencao .card-prevencao .card-prevencao-topo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.secao-prevencao .card-prevencao .card-prevencao-topo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.secao-prevencao .card-prevencao .card-prevencao-topo h4 {
+  font-size: 1.1rem;
+  color: #1f2933;
+}
+.secao-prevencao .card-prevencao .card-prevencao-topo .texto-faixa-etaria {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+.secao-prevencao .card-prevencao p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+.secao-prevencao .card-prevencao .badge-exame {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #FFE5F1;
+  color: #B91C65;
+}
+
+/* Estilo específico da Prevenção Feminina */
+.secao-prevencao-feminina {
+  background: linear-gradient(to right, #FFE5F1 0%, #F4F7FF 50%, #F4F7FF 100%);
+}
+.secao-prevencao-feminina .tag-prevencao-feminina {
+  background: linear-gradient(to right, #F26BAA 0%, #4247A2 100%);
+}
+.secao-prevencao-feminina .card-prevencao {
+  border-left: 4px solid #F26BAA;
+}
+
+/* Responsivo para as seções de prevenção */
+@media (min-width: 900px) {
+  .secao-prevencao .cards-prevencao {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .secao-prevencao .cards-prevencao .card-prevencao {
+    flex: 1 1 calc(50% - 20px);
+  }
+}/*# sourceMappingURL=style.css.map */
