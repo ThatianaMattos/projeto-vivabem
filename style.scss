@@ -154,125 +154,294 @@ header {
 /* Seções de Prevenção - base */
 
 .secao-prevencao {
-    width: 100%;
-    padding: 40px 0 60px 0;
+  width: 100%;
+  padding: 40px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .box-prevencao-titulo {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    .tag-prevencao {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      color: #1f2933;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+  }
+
+  .cards-prevencao {
+    width: 80%;
+    max-width: 1120px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+  }
 
-    .box-prevencao-titulo {
-        width: 80%;
-        max-width: 800px;
-        text-align: center;
-        margin-bottom: 30px;
+  .card-prevencao {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
-        .tag-prevencao {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
+    .card-prevencao-topo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
 
-        h3 {
-            font-size: 1.8rem;
-            color: #1f2933;
-            margin-bottom: 10px;
-        }
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
 
-        p {
-            font-size: 0.95rem;
-            color: #4b5563;
-        }
+      h4 {
+        font-size: 1.1rem;
+        color: #1f2933;
+      }
+
+      .texto-faixa-etaria {
+        font-size: 0.8rem;
+        color: #6b7280;
+      }
     }
 
-    .cards-prevencao {
-        width: 80%;
-        max-width: 1120px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+    p {
+      font-size: 0.95rem;
+      color: #4b5563;
     }
 
-    .card-prevencao {
-        background-color: #ffffff;
-        border-radius: 20px;
-        padding: 20px;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-
-        .card-prevencao-topo {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-
-            img {
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-
-            h4 {
-                font-size: 1.1rem;
-                color: #1f2933;
-            }
-
-            .texto-faixa-etaria {
-                font-size: 0.8rem;
-                color: #6b7280;
-            }
-        }
-
-        p {
-            font-size: 0.95rem;
-            color: #4b5563;
-        }
-
-        .badge-exame {
-            display: inline-block;
-            align-self: flex-start;
-            padding: 4px 12px;
-            border-radius: 999px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            background-color: #FFE5F1;
-            color: #B91C65;
-        }
+    .badge-exame {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background-color: #ffe5f1;
+      color: #b91c65;
     }
+  }
 }
 
 /* Estilo específico da Prevenção Feminina */
 
 .secao-prevencao-feminina {
-    background: linear-gradient(to right, #FFE5F1 0%, #F4F7FF 50%, #F4F7FF 100%);
+  background: linear-gradient(to right, #ffe5f1 0%, #f4f7ff 50%, #f4f7ff 100%);
 
-    .tag-prevencao-feminina {
-        background: linear-gradient(to right, #F26BAA 0%, #4247A2 100%);
-    }
+  .tag-prevencao-feminina {
+    background: linear-gradient(to right, #f26baa 0%, #4247a2 100%);
+  }
 
-    .card-prevencao {
-        border-left: 4px solid #F26BAA;
-    }
+  .card-prevencao {
+    border-left: 4px solid #f26baa;
+  }
 }
 
 /* Responsivo para as seções de prevenção */
 
 @media (min-width: 900px) {
-    .secao-prevencao {
-        .cards-prevencao {
-            flex-direction: row;
-            flex-wrap: wrap;
+  .secao-prevencao {
+    .cards-prevencao {
+      flex-direction: row;
+      flex-wrap: wrap;
 
-            .card-prevencao {
-                flex: 1 1 calc(50% - 20px);
-            }
-        }
+      .card-prevencao {
+        flex: 1 1 calc(50% - 20px);
+      }
     }
+  }
+}
+/* Estilo específico da Prevenção Masculina */
+
+.secao-prevencao-masculina {
+  background: linear-gradient(to right, #e2f4ff 0%, #f4f7ff 50%, #f4f7ff 100%);
+
+  .tag-prevencao-masculina {
+    background: linear-gradient(to right, #1173d4 0%, #33cc73 100%);
+  }
+
+  .card-prevencao {
+    border-left: 4px solid #1173d4;
+  }
+}
+/* Seção Alertas Importantes */
+
+.secao-alertas {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #f4f7ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .box-alertas-titulo {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    .tag-alertas {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: linear-gradient(to right, #1173d4 0%, #52b095 100%);
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      color: #1f2933;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+  }
+
+  .cards-alertas {
+    width: 80%;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .card-alerta {
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      color: #1f2933;
+
+      img {
+        width: 40px;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+
+    .alerta-verde {
+      background-color: #e4fdee;
+      border-left: 4px solid #33cc73;
+    }
+
+    .alerta-azul {
+      background-color: #e4f0ff;
+      border-left: 4px solid #1173d4;
+    }
+
+    .alerta-amarelo {
+      background-color: #fff8d9;
+      border-left: 4px solid #eab308;
+    }
+  }
+}
+
+/* Responsivo Alertas */
+@media (min-width: 900px) {
+  .secao-alertas {
+    .cards-alertas {
+      flex-direction: row;
+
+      .card-alerta {
+        flex: 1;
+      }
+    }
+  }
+}
+/* Footer */
+
+.rodape {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #0b1020;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+
+  .rodape-conteudo {
+    width: 80%;
+    max-width: 1120px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .rodape-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 480px;
+
+    img {
+      height: 32px;
+      width: auto;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #cbd5f5;
+    }
+  }
+
+  .rodape-direita {
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+}
+
+/* Footer responsivo */
+
+@media (min-width: 900px) {
+  .rodape {
+    .rodape-conteudo {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .rodape-direita {
+      text-align: right;
+    }
+  }
 }

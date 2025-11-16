@@ -215,19 +215,19 @@ header .box-header nav a {
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 600;
-  background-color: #FFE5F1;
-  color: #B91C65;
+  background-color: #ffe5f1;
+  color: #b91c65;
 }
 
 /* Estilo específico da Prevenção Feminina */
 .secao-prevencao-feminina {
-  background: linear-gradient(to right, #FFE5F1 0%, #F4F7FF 50%, #F4F7FF 100%);
+  background: linear-gradient(to right, #ffe5f1 0%, #f4f7ff 50%, #f4f7ff 100%);
 }
 .secao-prevencao-feminina .tag-prevencao-feminina {
-  background: linear-gradient(to right, #F26BAA 0%, #4247A2 100%);
+  background: linear-gradient(to right, #f26baa 0%, #4247a2 100%);
 }
 .secao-prevencao-feminina .card-prevencao {
-  border-left: 4px solid #F26BAA;
+  border-left: 4px solid #f26baa;
 }
 
 /* Responsivo para as seções de prevenção */
@@ -238,5 +238,146 @@ header .box-header nav a {
   }
   .secao-prevencao .cards-prevencao .card-prevencao {
     flex: 1 1 calc(50% - 20px);
+  }
+}
+/* Estilo específico da Prevenção Masculina */
+.secao-prevencao-masculina {
+  background: linear-gradient(to right, #e2f4ff 0%, #f4f7ff 50%, #f4f7ff 100%);
+}
+.secao-prevencao-masculina .tag-prevencao-masculina {
+  background: linear-gradient(to right, #1173d4 0%, #33cc73 100%);
+}
+.secao-prevencao-masculina .card-prevencao {
+  border-left: 4px solid #1173d4;
+}
+
+/* Seção Alertas Importantes */
+.secao-alertas {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #f4f7ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.secao-alertas .box-alertas-titulo {
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.secao-alertas .box-alertas-titulo .tag-alertas {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #1173d4 0%, #52b095 100%);
+  color: white;
+  margin-bottom: 10px;
+}
+.secao-alertas .box-alertas-titulo h3 {
+  font-size: 1.8rem;
+  color: #1f2933;
+  margin-bottom: 10px;
+}
+.secao-alertas .box-alertas-titulo p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+.secao-alertas .cards-alertas {
+  width: 80%;
+  max-width: 1150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.secao-alertas .cards-alertas .card-alerta {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #1f2933;
+}
+.secao-alertas .cards-alertas .card-alerta img {
+  width: 40px;
+}
+.secao-alertas .cards-alertas .card-alerta h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.secao-alertas .cards-alertas .card-alerta p {
+  font-size: 0.95rem;
+}
+.secao-alertas .cards-alertas .alerta-verde {
+  background-color: #e4fdee;
+  border-left: 4px solid #33cc73;
+}
+.secao-alertas .cards-alertas .alerta-azul {
+  background-color: #e4f0ff;
+  border-left: 4px solid #1173d4;
+}
+.secao-alertas .cards-alertas .alerta-amarelo {
+  background-color: #fff8d9;
+  border-left: 4px solid #eab308;
+}
+
+/* Responsivo Alertas */
+@media (min-width: 900px) {
+  .secao-alertas .cards-alertas {
+    flex-direction: row;
+  }
+  .secao-alertas .cards-alertas .card-alerta {
+    flex: 1;
+  }
+}
+/* Footer */
+.rodape {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #0b1020;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+}
+.rodape .rodape-conteudo {
+  width: 80%;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rodape .rodape-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 480px;
+}
+.rodape .rodape-esquerda img {
+  height: 32px;
+  width: auto;
+}
+.rodape .rodape-esquerda p {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+.rodape .rodape-direita {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* Footer responsivo */
+@media (min-width: 900px) {
+  .rodape .rodape-conteudo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rodape .rodape-direita {
+    text-align: right;
   }
 }/*# sourceMappingURL=style.css.map */
