@@ -51,7 +51,7 @@ Por se tratar de um material didático interno, o arquivo de layout não é púb
 🚀 Deploy
 Vercel: [https://github.com/ThatianaMattos/projeto-vivabem/edit/main/README.md](https://projeto-vivabem-rho.vercel.app/)
 ****
-GitHub Pages: https://thatianamattos.github.io/vivabem
+GitHub Pages: [https://thatianamattos.github.io/vivabem](https://thatianamattos.github.io/projeto-vivabem/)
 
 ## 🚀 Como executar o projeto
 
