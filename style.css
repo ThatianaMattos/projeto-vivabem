@@ -29,75 +29,12 @@ header {
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
-  /* Ajustes do header no mobile */
-}
-@media (max-width: 768px) {
-  header {
-    /* Título centralizado no mobile */
-  }
-  header header {
-    background-image: none;
-    min-height: auto;
-    padding-top: 24px;
-  }
-  header header .box-header {
-    width: 92%;
-    max-width: 340px;
-    height: auto;
-    padding: 8px 14px;
-    border-radius: 999px;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  header header .box-header img {
-    height: 26px;
-  }
-  header header .box-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 8px;
-    flex: 1;
-  }
-  header header .box-header nav a {
-    font-size: 0.7rem;
-    white-space: nowrap;
-  }
-  header header .box-banner {
-    width: 92%;
-    margin-top: 40px;
-    justify-content: center;
-  }
-  header header .box-banner .box-titulo {
-    max-width: 100%;
-    text-align: center;
-  }
-  header header .box-banner .box-titulo p {
-    max-width: 100%;
-  }
-}
-@media (max-width: 420px) {
-  header header .box-header {
-    max-width: 320px;
-    padding-inline: 10px;
-  }
-  header header .box-header nav a {
-    font-size: 0.65rem;
-  }
-}
-
-.box-header nav a .label-mobile {
-  display: none; /* mobile escondido no desktop */
-}
-
-.box-header nav a .label-desktop {
-  display: inline; /* mostra o texto completo no desktop */
 }
 
 /* Barra com logo + navegação */
 .box-header {
   width: 78%;
-  max-width: 1117px; /* mesmo valor do Figma */
+  max-width: 1117px;
   height: 57px;
   margin-top: 32px;
   border-radius: 999px;
@@ -105,9 +42,9 @@ header {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* logo e nav alinhados da esquerda para a direita */
+  justify-content: flex-start;
   padding: 0 40px;
-  gap: 170px; /* espaço entre logo e nav. Se quiser mais ou menos, ajusta aqui */
+  gap: 170px;
 }
 
 /* Logo Viva Bem */
@@ -116,11 +53,11 @@ header {
   width: auto;
 }
 
-/* Navegação (Prevenção Masculina / Feminina) */
+/* Navegação */
 .box-header nav {
   display: flex;
   align-items: center;
-  gap: 72px; /* distancia entre Masculina e Feminina, pode ajustar */
+  gap: 72px;
 }
 
 .box-header nav a {
@@ -128,13 +65,22 @@ header {
   font-size: 0.88rem;
   font-weight: 400;
   color: #ffffff;
-  white-space: nowrap; /* garante que não quebra linha */
+  white-space: nowrap;
   transition: opacity 0.2s ease, transform 0.15s ease;
 }
 
 .box-header nav a:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+}
+
+/* Textos diferentes para desktop e mobile */
+.box-header nav a .label-mobile {
+  display: none;
+}
+
+.box-header nav a .label-desktop {
+  display: inline;
 }
 
 /* HERO: texto e botões */
@@ -173,7 +119,7 @@ header {
   font-size: 1rem;
   color: #4b5563;
   max-width: 360px;
-  font-weight: 500; /* ADICIONE AQUI */
+  font-weight: 500;
 }
 
 /* Botões do hero */
@@ -192,7 +138,7 @@ button {
 
 .btn {
   padding: 14px 28px;
-  border-radius: 10px; /* Figma vibes */
+  border-radius: 10px;
   font-size: 0.95rem;
   font-weight: 600;
   transition: all 0.15s ease;
@@ -297,7 +243,7 @@ button {
     gap: 32px;
   }
 }
-/* PREVENÇÃO FEMININA  E MASCULINA 100% FLEXBOX  */
+/* PREVENÇÃO FEMININA E MASCULINA */
 .secao-prevencao-feminina {
   width: 100%;
   padding: 56px 0 80px;
@@ -314,7 +260,6 @@ button {
   margin-bottom: 40px;
 }
 
-/* Masculina */
 .secao-prevencao-masculina {
   width: 100%;
   padding: 56px 0 80px;
@@ -336,7 +281,7 @@ button {
   color: transparent;
 }
 
-/* Contêiner dos cards  FEM E MASC  */
+/* Contêiner dos cards FEM e MASC */
 .grid-prevencao-feminina,
 .grid-prevencao-masculina {
   width: 80%;
@@ -347,7 +292,7 @@ button {
   gap: 28px 32px;
 }
 
-/* Card padrão (250 x 400 igual ao Figma) */
+/* Card padrão */
 .card-faixa {
   width: 250px;
   min-height: 400px;
@@ -390,27 +335,7 @@ button {
   margin-top: 4px;
 }
 
-/* Responsividade das faixas (tablet e mobile) */
-@media (max-width: 980px) {
-  .grid-prevencao-feminina,
-  .grid-prevencao-masculina {
-    justify-content: center;
-  }
-  .card-faixa {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-@media (max-width: 640px) {
-  .grid-prevencao-feminina,
-  .grid-prevencao-masculina {
-    width: 90%;
-  }
-  .card-faixa {
-    max-width: 100%;
-  }
-}
-/* SEÇÃO ALERTAS IMPORTANTES – igual ao Figma */
+/* SEÇÃO ALERTAS IMPORTANTES */
 .secao-alertas {
   width: 100%;
   padding: 56px 0 72px;
@@ -420,7 +345,7 @@ button {
   align-items: center;
 }
 
-/* Título com gradiente azul → verde */
+/* Título com gradiente azul para verde */
 .titulo-alertas {
   font-size: 2rem;
   font-weight: 800;
@@ -433,14 +358,14 @@ button {
   color: transparent;
 }
 
-/* Grid 2x2 centralizado */
+/* Grid dos alertas usando Flexbox (regra do desafio) */
 .grid-alertas {
   width: 80%;
   max-width: 900px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
-  gap: 24px 32px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 24px 32px;
 }
 
 /* Card base */
@@ -452,6 +377,7 @@ button {
   flex-direction: column;
   gap: 8px;
   font-size: 0.9rem;
+  width: 416px;
 }
 
 /* Topo do card: ícone + título */
@@ -473,10 +399,10 @@ button {
 
 .card-alerta p {
   font-size: 0.95rem;
-  line-height: 1.45; /* deixa o respiro igual ao do figma */
-  width: 90%; /* concentra o texto como no design */
-  margin: 0 auto; /* centraliza o bloco de texto */
-  text-align: justify; /* dá o efeito visual do figma */
+  line-height: 1.45;
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
 }
 
 .card-alerta h4 {
@@ -484,7 +410,7 @@ button {
 }
 
 .card-alerta p {
-  text-wrap: pretty; /* deixa a quebra das linhas mais suave */
+  text-wrap: pretty;
 }
 
 /* Cores dos 4 cards */
@@ -504,12 +430,6 @@ button {
   background-color: #fff4d4;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .grid-alertas {
-    grid-template-columns: 1fr;
-  }
-}
 /* FOOTER */
 .rodape {
   width: 100%;
@@ -610,35 +530,42 @@ button {
   color: #9ca3af;
 }
 
-/* Desktop: mantém texto centralizado visualmente parecido com o Figma */
 .rodape-bottom p {
   text-align: center;
 }
 
-/* RESPONSIVO FOOTER */
-@media (max-width: 900px) {
-  .rodape-container {
-    width: 90%;
+/* RESPONSIVIDADE GERAL */
+/* Cards de prevenção mais estreitos no mobile */
+@media (max-width: 980px) {
+  .grid-prevencao-feminina,
+  .grid-prevencao-masculina {
+    justify-content: center;
   }
-  .rodape-top {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .rodape-bottom p {
-    text-align: left;
+  .card-faixa {
+    width: 100%;
+    max-width: 320px;
   }
 }
-/* AJUSTES FINOS PARA MOBILE  */
-/* 1. Header no celular: sem imagem de fundo e pill certinho */
+@media (max-width: 640px) {
+  .grid-prevencao-feminina,
+  .grid-prevencao-masculina {
+    width: 90%;
+  }
+  .card-faixa {
+    max-width: 100%;
+  }
+}
+/* Ajustes de layout mobile geral (header, hero, cards, footer) */
 @media (max-width: 768px) {
+  /* Header sem imagem de fundo e pill menor */
   header {
     min-height: auto;
     padding-top: 24px;
-    background-image: none; /* some com o desenho do lado no mobile */
+    background-image: none;
   }
   .box-header {
     width: 90%;
-    max-width: 360px; /* deixa a barrinha mais parecida com o Figma */
+    max-width: 360px;
     height: auto;
     padding: 8px 16px;
     margin-top: 16px;
@@ -651,22 +578,23 @@ button {
   }
   .box-header nav {
     display: flex;
-    flex-wrap: wrap; /* deixa quebrar em duas linhas se precisar */
     justify-content: flex-end;
-    gap: 4px 8px;
+    gap: 8px;
+    flex: 1;
   }
   .box-header nav a {
     font-size: 0.7rem;
-    white-space: normal; /* permite quebra de linha em "Prevenção Feminina" */
   }
-  /* 2. Texto do hero ocupando melhor a largura e botões lado a lado */
+  /* Hero ajustado para celular */
   .box-banner {
     width: 90%;
     max-width: 360px;
     margin-top: 32px;
+    justify-content: center;
   }
   .box-banner .box-titulo {
     max-width: 100%;
+    text-align: center;
   }
   .box-banner .box-titulo h2 {
     font-size: 2rem;
@@ -677,30 +605,36 @@ button {
   }
   .box-botoes {
     margin-top: 20px;
-    justify-content: center; /* centraliza os dois botões */
-    flex-wrap: nowrap; /* tenta manter lado a lado */
+    justify-content: center;
+    flex-wrap: nowrap;
     gap: 12px;
   }
   .btn {
     padding: 10px 16px;
     font-size: 0.8rem;
-    white-space: nowrap; /* não quebra o texto dentro do botão */
+    white-space: nowrap;
   }
-}
-/* 3. Cards de prevenção mais estreitos no mobile */
-@media (max-width: 768px) {
+  /* Cards de prevenção mais estreitos */
   .grid-prevencao-feminina,
   .grid-prevencao-masculina {
     width: 90%;
   }
   .card-faixa {
     width: 100%;
-    max-width: 320px; /* fica mais estreito como no Figma mobile */
+    max-width: 320px;
     min-height: auto;
   }
-}
-/* 4. Footer centralizado no mobile */
-@media (max-width: 768px) {
+  /* Alertas um por linha */
+  .grid-alertas {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-alerta {
+    width: 100%;
+    max-width: 416px;
+  }
+  /* Footer centralizado */
   .rodape-container {
     width: 90%;
     align-items: center;
@@ -726,48 +660,24 @@ button {
     text-align: center;
   }
 }
-/* CORREÇÃO DO HEADER MOBILE - NÃO DEIXAR OS LINKS EM CIMA UM DO OUTRO */
-@media (max-width: 768px) {
-  .box-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap; /* impede quebrar em linhas */
-    padding: 10px 16px;
-    gap: 8px;
-  }
-  .box-header nav {
-    flex: 1; /* empurra os links para a direita */
-    display: flex;
-    justify-content: flex-end;
-  }
-  .box-header nav ul {
-    display: flex;
-    gap: 6px;
-    flex-wrap: nowrap; /* impede os links de quebrarem */
-  }
-  .box-header nav ul li a {
-    font-size: 0.72rem;
-    white-space: nowrap; /* impede o texto quebrar */
-  }
-}
+/* Ajustes finos para telas bem pequenas e troca de label dos menus */
 @media (max-width: 600px) {
-  /* ... o que você já tem aí dentro ... */
   .box-header {
     width: 90%;
+    max-width: 320px;
     padding-inline: 16px;
   }
   .box-header nav {
     gap: 12px;
   }
   .box-header nav a {
-    font-size: 0.7rem; /* pode ajustar se quiser maior ou menor */
+    font-size: 0.7rem;
   }
-  /* troca os textos no mobile */
+  /* Troca os textos no mobile */
   .box-header nav a .label-desktop {
-    display: none; /* esconde texto longo */
+    display: none;
   }
   .box-header nav a .label-mobile {
-    display: inline; /* mostra texto abreviado */
+    display: inline;
   }
 }/*# sourceMappingURL=style.css.map */
