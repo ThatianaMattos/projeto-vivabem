@@ -3,9 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Viva Bem</title>
+
 </head>
 
 <body>
@@ -13,12 +21,20 @@
         <div class="box-header">
             <img src="./img/LogoVivaBem.png" alt="Logo do site Viva Bem">
             <nav>
-                <a href="#prevencao-feminina">Prevenção Feminina</a>
-                <a href="#prevencao-masculina">Prevenção Masculina</a>
-                <a href="#alertas-importantes">Alertas Importantes</a>
+                <a href="#prevencao-masculina">
+                    <span class="label-desktop">Prevenção Masculina</span>
+                    <span class="label-mobile">Prev. Masc.</span>
+                </a>
+
+                <a href="#prevencao-feminina">
+                    <span class="label-desktop">Prevenção Feminina</span>
+                    <span class="label-mobile">Prev. Fem.</span>
+                </a>
             </nav>
 
+
         </div>
+
         <section class="box-banner">
             <div class="box-titulo">
                 <h2>Cuidar da saúde é um ato de amor</h2>
@@ -27,15 +43,14 @@
                     <button class="btn btn-primary">Ver Agenda por Idade</button>
                     <button class="btn btn-outline">Saiba Mais</button>
                 </div>
-
             </div>
         </section>
     </header>
+
     <main>
         <!-- Seção Exames de Rotina -->
         <section class="secao-exames" id="exames-rotina">
             <div class="box-exames-titulo">
-                <span class="tag-exames">Exames de rotina</span>
                 <h3>A importância dos exames de rotina</h3>
                 <p>
                     Exames preventivos ajudam a identificar alterações logo no início,
@@ -45,225 +60,292 @@
 
             <div class="cards-exames">
                 <article class="card-exame">
-                    <img src="./img/iconCoração.png" alt="Ícone de saúde do coração">
-                    <h4>Saúde do coração</h4>
+                    <img src="./img/check 2.png" alt="Ícone de detecção precoce">
+                    <h4>Detecção precoce</h4>
                     <p>
-                        Avaliação de pressão arterial, batimentos e colesterol para prevenir doenças cardiovasculares.
+                        Identifique problemas antes que se tornem graves.
                     </p>
                 </article>
 
                 <article class="card-exame">
-                    <img src="./img/iconCerebro.png" alt="Ícone de diagnóstico precoce">
-                    <h4>Diagnóstico precoce</h4>
+                    <img src="./img/apoioFamilia.png" alt="Ícone de cuidado familiar">
+                    <h4>Cuidado familiar</h4>
                     <p>
-                        Atenção aos primeiros sinais pode salvar vidas e garantir um tratamento mais eficaz.
+                        Proteja toda a família com exames regulares.
                     </p>
                 </article>
 
                 <article class="card-exame">
-                    <img src="./img/iconEscudo.png" alt="Ícone de proteção e prevenção">
-                    <h4>Proteção contínua</h4>
+                    <img src="./img/coração.png" alt="Ícone de qualidade de vida">
+                    <h4>Qualidade de vida</h4>
                     <p>
-                        Check ups frequentes ajudam a acompanhar sua saúde e identificar alterações ao longo do tempo.
+                        Viva mais e melhor com prevenção adequada.
                     </p>
                 </article>
             </div>
         </section>
+
         <!-- Seção Prevenção Feminina -->
-        <section class="secao-prevencao secao-prevencao-feminina" id="prevencao-feminina">
-            <div class="box-prevencao-titulo">
-                <span class="tag-prevencao tag-prevencao-feminina">Prevenção feminina</span>
-                <h3>Cuidados importantes para a saúde da mulher</h3>
-                <p>
-                    Alguns exames de rotina ajudam a acompanhar a saúde em cada fase da vida,
-                    garantindo mais bem estar, autocuidado e prevenção.
-                </p>
-            </div>
+        <section class="secao-prevencao-feminina" id="prevencao-feminina">
+            <h3 class="titulo-prevencao-feminina">Prevenção Feminina</h3>
 
-            <div class="cards-prevencao">
-                <article class="card-prevencao">
-                    <div class="card-prevencao-topo">
-                        <img src="./img/imagemMamografia.png" alt="Exame de mamografia">
-                        <div>
-                            <h4>Mamografia</h4>
-                            <span class="texto-faixa-etaria">Conforme idade e histórico familiar</span>
-                        </div>
-                    </div>
-                    <p>
-                        Exame de imagem que auxilia na detecção precoce do câncer de mama e outras alterações.
-                    </p>
-                    <span class="badge-exame">Rastreamento</span>
+            <div class="grid-prevencao-feminina">
+
+                <!-- Card 1 -->
+                <article class="card-faixa">
+                    <img src="./img/imagemVacina.png" alt="Vacinação em dia">
+                    <h4>A partir dos 15 anos</h4>
+                    <ul>
+                        <li>Vacinação em dia (HPV, tétano, hepatite B, influenza, covid).</li>
+                        <li>Consulta ginecológica inicial (orientação sobre saúde menstrual, contracepção e prevenção de
+                            ISTs)</li>
+                    </ul>
                 </article>
 
-                <article class="card-prevencao">
-                    <div class="card-prevencao-topo">
-                        <img src="./img/imagemExameHPV.png" alt="Exame preventivo HPV">
-                        <div>
-                            <h4>Prevenção HPV</h4>
-                            <span class="texto-faixa-etaria">Indicado pelo ginecologista</span>
-                        </div>
-                    </div>
-                    <p>
-                        Exames preventivos ajudam a identificar alterações causadas pelo HPV e tratar o quanto antes.
-                    </p>
-                    <span class="badge-exame">Exame preventivo</span>
+                <!-- Card 2 -->
+                <article class="card-faixa">
+                    <img src="./img/imagemExameDeSangue.png" alt="Exames de sangue">
+                    <h4>A partir dos 20 anos</h4>
+                    <ul>
+                        <li>Exames de sangue e urina anuais (hemograma, glicose, colesterol, função renal e hepática)
+                        </li>
+                        <li>Check-up odontológico e oftalmológico</li>
+                        <li>Exame dermatológico (rastreamento de câncer de pele)</li>
+                    </ul>
                 </article>
 
-                <article class="card-prevencao">
-                    <div class="card-prevencao-topo">
-                        <img src="./img/imagemVacina.png" alt="Mulher tomando vacina">
-                        <div>
-                            <h4>Vacinação em dia</h4>
-                            <span class="texto-faixa-etaria">Em diferentes fases da vida</span>
-                        </div>
-                    </div>
-                    <p>
-                        Manter o cartão de vacinas atualizado também é uma forma de prevenção e proteção.
-                    </p>
-                    <span class="badge-exame">Imunização</span>
+                <!-- Card 3 -->
+                <article class="card-faixa">
+                    <img src="./img/imagemExameHPV.png" alt="Prevenção HPV">
+                    <h4>A partir dos 25 anos</h4>
+                    <ul>
+                        <li>Papanicolau (preventivo) – a cada 3 anos se não houver alterações</li>
+                        <li>Rastreio do HPV se indicado</li>
+                    </ul>
                 </article>
 
-                <article class="card-prevencao">
-                    <div class="card-prevencao-topo">
-                        <img src="./img/imagemExameDeSangue.png" alt="Exame de sangue">
-                        <div>
-                            <h4>Exames de sangue</h4>
-                            <span class="texto-faixa-etaria">Check up periódico</span>
-                        </div>
-                    </div>
-                    <p>
-                        Avaliam colesterol, ferro, vitaminas, hormônios e outros pontos importantes para o bem estar.
-                    </p>
-                    <span class="badge-exame">Check up</span>
+                <!-- Card 4 -->
+                <article class="card-faixa">
+                    <img src="./img/imagemExameCardiovascular.png" alt="Exame Cardiovascular">
+                    <h4>A partir dos 30 anos</h4>
+                    <ul>
+                        <li>Check up anual com clínico geral.</li>
+                        <li>Exames de sangue mais completos.</li>
+                        <li>Aferição da pressão arterial e glicemia</li>
+                        <li>Exames cardiovasculares iniciais se houver histórico familiar ou fatores de risco</li>
+                    </ul>
                 </article>
+
+                <!-- Card 5 -->
+                <article class="card-faixa">
+                    <img src="./img/imagemMamografia.png" alt="Mamografia">
+                    <h4>A partir dos 40 anos</h4>
+                    <ul>
+                        <li>Mamografia anual ou bianual (dependendo do histórico familiar)</li>
+                        <li>Exames cardiovasculares mais detalhados (eletrocardiograma, teste ergométrico,
+                            ecocardiograma se indicado)</li>
+                    </ul>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="card-faixa">
+                    <img src="./img/imagemColonoscopia.png" alt="Exame de Colonoscopia">
+                    <h4>A partir dos 50 anos</h4>
+                    <ul>
+                        <li>Colonoscopia (a cada 5 anos, ou antes se houver risco</li>
+                        <li>Continuidade dos exames laboratoriais e ginecológicos</li>
+                        <li>Monitoramento para osteoporose (densitometria óssea pode ser indicada)</li>
+                    </ul>
+                </article>
+
             </div>
         </section>
+
         <!-- Seção Prevenção Masculina -->
-        <section class="secao-prevencao secao-prevencao-masculina" id="prevencao-masculina">
-            <div class="box-prevencao-titulo">
-                <span class="tag-prevencao tag-prevencao-masculina">Prevenção masculina</span>
-                <h3>Exames essenciais para a saúde do homem</h3>
-                <p>
-                    O acompanhamento da saúde masculina é fundamental em todas as etapas da vida,
-                    ajudando na prevenção, diagnóstico precoce e qualidade de vida.
-                </p>
-            </div>
+        <section class="secao-prevencao-masculina" id="prevencao-masculina">
+            <h3 class="titulo-prevencao-masculina">Prevenção Masculina</h3>
 
-            <div class="cards-prevencao">
-                <article class="card-prevencao">
-                    <div class="card-prevencao-topo">
-                        <img src="./img/exameDeAangueHomem.png" alt="Exame de sangue homem">
-                        <div>
-                            <h4>Exame de sangue</h4>
-                            <span class="texto-faixa-etaria">Check up periódico</span>
-                        </div>
-                    </div>
-                    <p>
-                        Avalia colesterol, glicose, PSA, zinco e outros indicadores importantes da saúde masculina.
-                    </p>
-                    <span class="badge-exame">Check up</span>
+            <div class="grid-prevencao-masculina">
+                <!-- 15 anos -->
+                <article class="card-faixa">
+                    <img src="./img/adolescente-tomando-vacina-vacina-adolescente-vacinacao-1629490627577_v2_1x1 2.png"
+                        alt="Adolescente tomando vacina">
+                    <h4>A partir dos 15 anos</h4>
+                    <ul>
+                        <li>Autoexame testicular (mensal, após o banho)</li>
+                        <li>Atenção a alterações: tamanho, dor, nódulos</li>
+                        <li>Vacinação em dia (hepatite B, tétano, HPV, influenza, covid</li>
+                    </ul>
                 </article>
 
-                <article class="card-prevencao">
-                    <div class="card-prevencao-topo">
-                        <img src="./img/exameCardiovasculashomem.png" alt="Exame cardiovascular">
-                        <div>
-                            <h4>Saúde cardiovascular</h4>
-                            <span class="texto-faixa-etaria">Conforme faixa etária</span>
-                        </div>
-                    </div>
-                    <p>
-                        Exames que avaliam pressão arterial, batimentos, circulação e prevenções de doenças cardíacas.
-                    </p>
-                    <span class="badge-exame">Coração saudável</span>
+                <!-- 20 anos -->
+                <article class="card-faixa">
+                    <img src="./img/exameOftamologico.png" alt="Homem fazendo exame oftalmológico">
+                    <h4>A partir dos 20 anos</h4>
+                    <ul>
+                        <li>Exames de sangue e urina</li>
+                        <li>Avaliação odontológica e oftalmológica</li>
+                    </ul>
                 </article>
 
-                <article class="card-prevencao">
-                    <div class="card-prevencao-topo">
-                        <img src="./img/exameOftalmologico.png" alt="Exame oftalmológico">
-                        <div>
-                            <h4>Visão e bem estar</h4>
-                            <span class="texto-faixa-etaria">Avaliação anual</span>
-                        </div>
-                    </div>
-                    <p>
-                        Exames de vista ajudam a identificar alterações como miopia, astigmatismo,
-                        pressão ocular e início de catarata.
-                    </p>
-                    <span class="badge-exame">Avaliação anual</span>
+                <!-- 30 anos -->
+                <article class="card-faixa">
+                    <img src="./img/exameCardiovasculasHomem.png" alt="Homem em exame cardiovascular">
+                    <h4>A partir dos 30 anos</h4>
+                    <ul>
+                        <li>Check-up anual com clínico geral</li>
+                        <li>Exames de sangue mais completos</li>
+                        <li>Aferição da pressão arterial</li>
+                        <li>Glicemia de jejum </li>
+                        <li>Avaliação dermatológica</li>
+                        <li>Avaliação cardiovascular inicial </li>
+                    </ul>
                 </article>
 
-                <article class="card-prevencao">
-                    <div class="card-prevencao-topo">
-                        <img src="./img/consultadehomemde50anos.png" alt="Consulta masculina">
-                        <div>
-                            <h4>Acompanhamento médico</h4>
-                            <span class="texto-faixa-etaria">Especialista indicado</span>
-                        </div>
-                    </div>
-                    <p>
-                        Consultas periódicas auxiliam na prevenção de doenças silenciosas e na manutenção da saúde.
-                    </p>
-                    <span class="badge-exame">Prevenção contínua</span>
+                <!-- 40 anos -->
+                <article class="card-faixa">
+                    <img src="./img/exameDeAangueHomem.png" alt="Homem adulto em exame de sangue">
+                    <h4>A partir dos 40 anos</h4>
+                    <ul>
+                        <li>Exames cardiovasculares</li>
+                        <li>Exames de sangue e urina anuais continuam</li>
+                        <li>Se houver histórico familiar de câncer de cólon ou próstata, antecipar rastreamento</li>
+                    </ul>
+                </article>
+
+                <!-- 50 anos -->
+                <article class="card-faixa">
+                    <img src="./img/consultaDe HomemDe50Anos.png" alt="Homem de 50 anos em consulta médica">
+                    <h4>A partir dos 50 anos</h4>
+                    <ul>
+                        <li>Colonoscopia (a cada 5 anos)</li>
+                        <li>Exame de próstata (PSA + toque retal)</li>
+                        <li>Continuidade dos exames laboratoriais e cardiovasculares</li>
+                    </ul>
                 </article>
             </div>
         </section>
+
         <!-- Seção Alertas Importantes -->
         <section class="secao-alertas" id="alertas-importantes">
-            <div class="box-alertas-titulo">
-                <span class="tag-alertas">Alertas importantes</span>
-                <h3>Cuidados que precisam de atenção</h3>
-                <p>
-                    Algumas situações exigem cuidado especial e acompanhamento profissional.
-                    Atenção a sinais e sintomas pode evitar problemas futuros.
-                </p>
-            </div>
+            <h3 class="titulo-alertas">Alertas Importantes</h3>
 
-            <div class="cards-alertas">
-                <article class="card-alerta alerta-verde">
-                    <img src="./img/check 2.png" alt="Ícone de check">
-                    <h4>Check ups regulares</h4>
+            <div class="grid-alertas">
+                <!-- Card 1 -->
+                <article class="card-alerta card-rosa">
+                    <div class="card-alerta-topo">
+                        <img src="./img/iconCoração.png" alt="Ícone de coração">
+                        <h4>Autoexame das mamas</h4>
+                    </div>
                     <p>
-                        Acompanhar exames simples ajuda a monitorar sua saúde e prevenir problemas silenciosos.
+                        Realize o autoexame das mamas todo mês, entre o 7º e 10º dia após o início
+                        da menstruação. Para mulheres na menopausa, escolha um dia fixo.
                     </p>
                 </article>
 
-                <article class="card-alerta alerta-azul">
-                    <img src="./img/iconEscudo.png" alt="Ícone de escudo">
-                    <h4>Proteção e prevenção</h4>
+                <!-- Card 2 -->
+                <article class="card-alerta card-azul">
+                    <div class="card-alerta-topo">
+                        <img src="./img/iconEscudo.png" alt="Ícone escudo">
+                        <h4>Autoexame dos testículos</h4>
+                    </div>
                     <p>
-                        Medidas preventivas garantem maior qualidade de vida em todas as fases.
+                        Homens e pessoas com testículos devem realizar o autoexame mensalmente,
+                        de preferência após o banho, para identificar alterações como nódulos ou inchaços.
                     </p>
                 </article>
 
-                <article class="card-alerta alerta-amarelo">
-                    <img src="./img/iconVacina.png" alt="Ícone de vacina">
-                    <h4>Vacinação atualizada</h4>
+                <!-- Card 3 -->
+                <article class="card-alerta card-verde">
+                    <div class="card-alerta-topo">
+                        <img src="./img/iconVacina.png" alt="Ícone de vacinas">
+                        <h4>Vacinas em dia</h4>
+                    </div>
                     <p>
-                        Manter o cartão de vacinas em dia é essencial para proteção da saúde.
+                        Todos devem manter a carteira de vacinação
+                        atualizada. Algumas vacinas precisam de reforço na
+                        idade adulta, como tétano, difteria e hepatite B.
+                    </p>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card-alerta card-amarelo">
+                    <div class="card-alerta-topo">
+                        <img src="./img/iconCerebro.png" alt="Ícone cerebro">
+                        <h4>Saúde mental</h4>
+                    </div>
+                    <p>
+                        Cuidar da mente é tão importante quanto do corpo. Reserve momentos para
+                        relaxar, dormir bem e buscar apoio se sentir necessidade.
                     </p>
                 </article>
             </div>
         </section>
+
 
     </main>
     <!-- Footer -->
     <footer class="rodape">
-        <div class="rodape-conteudo">
-            <div class="rodape-esquerda">
-                <img src="./img/LogoVivaBem.png" alt="Logo Viva Bem">
-                <p>
-                    Conteúdo informativo para incentivo à prevenção em saúde.
-                    Sempre consulte profissionais de saúde para orientação personalizada.
-                </p>
+        <div class="rodape-container">
+            <div class="rodape-top">
+                <!-- Coluna esquerda: logo e frase -->
+                <div class="rodape-col rodape-brand">
+                    <img src="./img/LogoVivaBem.png" alt="Logo Viva Bem">
+                    <p class="rodape-slogan">“Prevenção é cuidado com você”</p>
+                    <p class="rodape-text">
+                        Conectando pessoas através da sustentabilidade e tecnologia.
+                    </p>
+                </div>
+
+                <!-- Coluna do meio: Links úteis -->
+                <div class="rodape-col rodape-links">
+                    <h4>Links úteis</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.gov.br/saude/pt-br" target="_blank" rel="noopener noreferrer">
+                                Ministério da Saúde
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gov.br/inca/pt-br" target="_blank" rel="noopener noreferrer">
+                                INCA – Instituto Nacional de Câncer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.gov.br/saude/pt-br/sus" target="_blank" rel="noopener noreferrer">
+                                SUS – Sistema Único de Saúde
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna direita: Contato e apoio -->
+                <div class="rodape-col rodape-contato">
+                    <h4>Contato e apoio</h4>
+                    <p>Disque Saúde: 136</p>
+                    <p>
+                        <a href="mailto:sac@saude.gov.br">sac@saude.gov.br</a>
+                    </p>
+                    <p class="rodape-emergencia">
+                        Em caso de emergência, procure imediatamente uma unidade de saúde
+                        ou ligue para o SAMU: 192.
+                    </p>
+                </div>
             </div>
 
-            <div class="rodape-direita">
-                <p>Projeto Viva Bem - Desafio Vai na Web</p>
-                <p>Desenvolvido por Thatiana Mattos</p>
+            <!-- Faixa de baixo -->
+            <div class="rodape-bottom">
+                <p>
+                    © 2025 Agenda de Saúde Preventiva. Informações baseadas em diretrizes
+                    médicas nacionais e internacionais.
+                </p>
+                <p class="rodape-assinatura">
+                    Projeto Viva Bem – Desafio Vai na Web. Desenvolvido por Thatiana Mattos.
+                </p>
             </div>
         </div>
     </footer>
+
 
 </body>
 

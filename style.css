@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
+/* RESET E BASE */
 * {
   margin: 0;
   padding: 0;
@@ -12,88 +13,177 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* HEADER + HERO (BANNER) */
 header {
-  height: 90vh;
+  min-height: 573px; /* altura do frame de header do Figma */
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 32px;
   background-image: url("./img/bannerHeader.png");
   background-repeat: no-repeat;
+  background-position: top right;
   background-size: contain;
+  /* Ajustes do header no mobile */
 }
-header .box-header {
-  margin-top: 30px;
-  width: 80%;
-  height: 10vh;
-  border-radius: 50px;
+@media (max-width: 768px) {
+  header {
+    /* Título centralizado no mobile */
+  }
+  header header {
+    background-image: none;
+    min-height: auto;
+    padding-top: 24px;
+  }
+  header header .box-header {
+    width: 92%;
+    max-width: 340px;
+    height: auto;
+    padding: 8px 14px;
+    border-radius: 999px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  header header .box-header img {
+    height: 26px;
+  }
+  header header .box-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex: 1;
+  }
+  header header .box-header nav a {
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+  header header .box-banner {
+    width: 92%;
+    margin-top: 40px;
+    justify-content: center;
+  }
+  header header .box-banner .box-titulo {
+    max-width: 100%;
+    text-align: center;
+  }
+  header header .box-banner .box-titulo p {
+    max-width: 100%;
+  }
+}
+@media (max-width: 420px) {
+  header header .box-header {
+    max-width: 320px;
+    padding-inline: 10px;
+  }
+  header header .box-header nav a {
+    font-size: 0.65rem;
+  }
+}
+
+.box-header nav a .label-mobile {
+  display: none; /* mobile escondido no desktop */
+}
+
+.box-header nav a .label-desktop {
+  display: inline; /* mostra o texto completo no desktop */
+}
+
+/* Barra com logo + navegação */
+.box-header {
+  width: 78%;
+  max-width: 1117px; /* mesmo valor do Figma */
+  height: 57px;
+  margin-top: 32px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4247a2 0%, #52b095 100%);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+  justify-content: flex-start; /* logo e nav alinhados da esquerda para a direita */
+  padding: 0 40px;
+  gap: 170px; /* espaço entre logo e nav. Se quiser mais ou menos, ajusta aqui */
 }
-header .box-header nav {
-  width: 40%;
-  height: 10vh;
+
+/* Logo Viva Bem */
+.box-header img {
+  height: 32px;
+  width: auto;
+}
+
+/* Navegação (Prevenção Masculina / Feminina) */
+.box-header nav {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 72px; /* distancia entre Masculina e Feminina, pode ajustar */
 }
-header .box-header nav a {
-  color: #fff;
+
+.box-header nav a {
   font-family: "Roboto", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #ffffff;
+  white-space: nowrap; /* garante que não quebra linha */
+  transition: opacity 0.2s ease, transform 0.15s ease;
 }
 
-.box-banner {
-  width: 80vw;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-}
-.box-banner .box-titulo {
-  height: 60vh;
-}
-.box-banner .box-titulo h2 {
-  font-size: 2.7rem;
-  font-weight: bold;
-  background: linear-gradient(to right, #1173d4 0%, #33cc73 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-weight: bold;
+.box-header nav a:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
-/* Botões do banner */
+/* HERO: texto e botões */
 .box-banner {
-  width: 80vw;
-  height: 80vh;
+  width: 78%;
+  max-width: 1120px;
+  margin-top: 72px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
+
 .box-banner .box-titulo {
-  height: 60vh;
+  max-width: 520px;
 }
+
+/* Título principal com gradiente */
 .box-banner .box-titulo h2 {
-  font-size: 2.7rem;
-  font-weight: bold;
-  background: linear-gradient(to right, #1173d4 0%, #33cc73 100%);
+  font-size: 2.8rem;
+  line-height: 1.2;
+  font-weight: 800;
+  background: linear-gradient(90deg, #1173d4 0%, #33cc73 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
+
+.box-titulo h2 {
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+/* Parágrafo do hero */
 .box-banner .box-titulo p {
-  margin-top: 10px;
-  font-size: 0.95rem;
+  margin-top: 16px;
+  font-size: 1rem;
   color: #4b5563;
-}
-.box-banner .box-titulo .box-botoes {
-  margin-top: 18px;
-  display: flex;
-  gap: 10px;
+  max-width: 360px;
+  font-weight: 500; /* ADICIONE AQUI */
 }
 
-/* Estilo geral dos botões */
+/* Botões do hero */
+.box-botoes {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 button {
   border: none;
   cursor: pointer;
@@ -101,17 +191,18 @@ button {
 }
 
 .btn {
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-size: 0.9rem;
+  padding: 14px 28px;
+  border-radius: 10px; /* Figma vibes */
+  font-size: 0.95rem;
   font-weight: 600;
   transition: all 0.15s ease;
 }
 
+/* Botão azul principal */
 .btn-primary {
   background-color: #1173d4;
   color: #ffffff;
-  box-shadow: 0 8px 18px rgba(17, 115, 212, 0.3);
+  box-shadow: 0 18px 40px rgba(17, 115, 212, 0.35);
 }
 
 .btn-primary:hover {
@@ -119,6 +210,7 @@ button {
   transform: translateY(-1px);
 }
 
+/* Botão contornado */
 .btn-outline {
   background-color: #ffffff;
   color: #1173d4;
@@ -129,397 +221,553 @@ button {
   background-color: #eff4ff;
 }
 
-/* Seção Exames de Rotina */
+/* SEÇÃO EXAMES DE ROTINA */
 .secao-exames {
   width: 100%;
   min-height: 60vh;
-  padding: 40px 0;
+  padding: 48px 0 64px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4f7ff; /* fundo clarinho parecido com o figma */
+  background-color: #f4f7ff;
 }
 .secao-exames .box-exames-titulo {
   width: 80%;
   max-width: 800px;
   text-align: center;
-  margin-bottom: 30px;
-}
-.secao-exames .box-exames-titulo .tag-exames {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ffffff;
-  background: linear-gradient(to right, #4247a2 0%, #33cc73 100%);
-  margin-bottom: 10px;
+  margin-bottom: 32px;
 }
 .secao-exames .box-exames-titulo h3 {
-  font-size: 1.8rem;
-  color: #1f2933;
+  font-size: 1.9rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #1173d4 0%, #33cc73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 10px;
 }
 .secao-exames .box-exames-titulo p {
   font-size: 0.95rem;
   color: #4b5563;
+  max-width: 640px;
+  margin: 0 auto;
 }
 .secao-exames .cards-exames {
   width: 80%;
-  max-width: 1100px;
+  max-width: 960px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 24px;
 }
 .secao-exames .cards-exames .card-exame {
+  width: 260px;
+  min-height: 190px;
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 20px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 10px;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
 }
 .secao-exames .cards-exames .card-exame img {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
 }
 .secao-exames .cards-exames .card-exame h4 {
-  font-size: 1.1rem;
-  color: #4247a2;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2933;
 }
 .secao-exames .cards-exames .card-exame p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #4b5563;
 }
 
-/* Responsivo para a seção de exames */
+/* Layout dos cards em linha no desktop */
 @media (min-width: 900px) {
   .secao-exames .cards-exames {
     flex-direction: row;
-  }
-  .secao-exames .cards-exames .card-exame {
-    flex: 1;
+    justify-content: center;
+    gap: 32px;
   }
 }
-/* Seções de Prevenção - base */
-.secao-prevencao {
+/* PREVENÇÃO FEMININA  E MASCULINA 100% FLEXBOX  */
+.secao-prevencao-feminina {
   width: 100%;
-  padding: 40px 0 60px 0;
+  padding: 56px 0 80px;
+  background-color: #ffe5f1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.secao-prevencao .box-prevencao-titulo {
-  width: 80%;
-  max-width: 800px;
+
+.titulo-prevencao-feminina {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ec4899;
+  margin-bottom: 40px;
+}
+
+/* Masculina */
+.secao-prevencao-masculina {
+  width: 100%;
+  padding: 56px 0 80px;
+  background: linear-gradient(180deg, #e2f4ff 0%, #f4f7ff 60%, #ffffff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-prevencao-masculina {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
   text-align: center;
-  margin-bottom: 30px;
+  background: linear-gradient(90deg, #1173d4 0%, #33cc73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
-.secao-prevencao .box-prevencao-titulo .tag-prevencao {
-  display: inline-block;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-.secao-prevencao .box-prevencao-titulo h3 {
-  font-size: 1.8rem;
-  color: #1f2933;
-  margin-bottom: 10px;
-}
-.secao-prevencao .box-prevencao-titulo p {
-  font-size: 0.95rem;
-  color: #4b5563;
-}
-.secao-prevencao .cards-prevencao {
+
+/* Contêiner dos cards  FEM E MASC  */
+.grid-prevencao-feminina,
+.grid-prevencao-masculina {
   width: 80%;
   max-width: 1120px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px 32px;
 }
-.secao-prevencao .card-prevencao {
+
+/* Card padrão (250 x 400 igual ao Figma) */
+.card-faixa {
+  width: 250px;
+  min-height: 400px;
   background-color: #ffffff;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  padding: 24px 24px 28px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-.secao-prevencao .card-prevencao .card-prevencao-topo {
-  display: flex;
   align-items: center;
-  gap: 14px;
 }
-.secao-prevencao .card-prevencao .card-prevencao-topo img {
-  width: 60px;
-  height: 60px;
+
+.card-faixa img {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 12px;
 }
-.secao-prevencao .card-prevencao .card-prevencao-topo h4 {
-  font-size: 1.1rem;
-  color: #1f2933;
+
+.card-faixa h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 8px;
 }
-.secao-prevencao .card-prevencao .card-prevencao-topo .texto-faixa-etaria {
-  font-size: 0.8rem;
-  color: #6b7280;
-}
-.secao-prevencao .card-prevencao p {
-  font-size: 0.95rem;
+
+.card-faixa ul {
+  margin-top: 8px;
+  padding-left: 18px;
+  font-size: 0.9rem;
   color: #4b5563;
-}
-.secao-prevencao .card-prevencao .badge-exame {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  background-color: #ffe5f1;
-  color: #b91c65;
+  align-self: stretch;
+  text-align: left;
 }
 
-/* Estilo específico da Prevenção Feminina */
-.secao-prevencao-feminina {
-  background: linear-gradient(to right, #ffe5f1 0%, #f4f7ff 50%, #f4f7ff 100%);
-}
-.secao-prevencao-feminina .tag-prevencao-feminina {
-  background: linear-gradient(to right, #f26baa 0%, #4247a2 100%);
-}
-.secao-prevencao-feminina .card-prevencao {
-  border-left: 4px solid #f26baa;
+.card-faixa li + li {
+  margin-top: 4px;
 }
 
-/* Responsivo para as seções de prevenção */
-@media (min-width: 900px) {
-  .secao-prevencao .cards-prevencao {
-    flex-direction: row;
-    flex-wrap: wrap;
+/* Responsividade das faixas (tablet e mobile) */
+@media (max-width: 980px) {
+  .grid-prevencao-feminina,
+  .grid-prevencao-masculina {
+    justify-content: center;
   }
-  .secao-prevencao .cards-prevencao .card-prevencao {
-    flex: 1 1 calc(50% - 20px);
+  .card-faixa {
+    width: 100%;
+    max-width: 320px;
   }
 }
-/* Estilo específico da Prevenção Masculina */
-.secao-prevencao-masculina {
-  background: linear-gradient(to right, #e2f4ff 0%, #f4f7ff 50%, #f4f7ff 100%);
+@media (max-width: 640px) {
+  .grid-prevencao-feminina,
+  .grid-prevencao-masculina {
+    width: 90%;
+  }
+  .card-faixa {
+    max-width: 100%;
+  }
 }
-.secao-prevencao-masculina .tag-prevencao-masculina {
-  background: linear-gradient(to right, #1173d4 0%, #33cc73 100%);
-}
-.secao-prevencao-masculina .card-prevencao {
-  border-left: 4px solid #1173d4;
-}
-
-/* Seção Alertas Importantes */
+/* SEÇÃO ALERTAS IMPORTANTES – igual ao Figma */
 .secao-alertas {
   width: 100%;
-  padding: 60px 0;
-  background-color: #f4f7ff;
+  padding: 56px 0 72px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.secao-alertas .box-alertas-titulo {
-  width: 80%;
-  max-width: 800px;
+
+/* Título com gradiente azul → verde */
+.titulo-alertas {
+  font-size: 2rem;
+  font-weight: 800;
   text-align: center;
-  margin-bottom: 30px;
-}
-.secao-alertas .box-alertas-titulo .tag-alertas {
-  display: inline-block;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: linear-gradient(to right, #1173d4 0%, #52b095 100%);
-  color: white;
-  margin-bottom: 10px;
-}
-.secao-alertas .box-alertas-titulo h3 {
-  font-size: 1.8rem;
-  color: #1f2933;
-  margin-bottom: 10px;
-}
-.secao-alertas .box-alertas-titulo p {
-  font-size: 0.95rem;
-  color: #4b5563;
-}
-.secao-alertas .cards-alertas {
-  width: 80%;
-  max-width: 1150px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.secao-alertas .cards-alertas .card-alerta {
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  color: #1f2933;
-}
-.secao-alertas .cards-alertas .card-alerta img {
-  width: 40px;
-}
-.secao-alertas .cards-alertas .card-alerta h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-.secao-alertas .cards-alertas .card-alerta p {
-  font-size: 0.95rem;
-}
-.secao-alertas .cards-alertas .alerta-verde {
-  background-color: #e4fdee;
-  border-left: 4px solid #33cc73;
-}
-.secao-alertas .cards-alertas .alerta-azul {
-  background-color: #e4f0ff;
-  border-left: 4px solid #1173d4;
-}
-.secao-alertas .cards-alertas .alerta-amarelo {
-  background-color: #fff8d9;
-  border-left: 4px solid #eab308;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #1173d4 0%, #21c45c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
-/* Responsivo Alertas */
-@media (min-width: 900px) {
-  .secao-alertas .cards-alertas {
-    flex-direction: row;
-  }
-  .secao-alertas .cards-alertas .card-alerta {
-    flex: 1;
-  }
-}
-/* Footer */
-.rodape {
-  width: 100%;
-  padding: 30px 0;
-  background-color: #0b1020;
-  color: #e5e7eb;
-  display: flex;
+/* Grid 2x2 centralizado */
+.grid-alertas {
+  width: 80%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 24px 32px;
   justify-content: center;
 }
-.rodape .rodape-conteudo {
+
+/* Card base */
+.card-alerta {
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+/* Topo do card: ícone + título */
+.card-alerta-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.card-alerta-topo img {
+  width: 28px;
+  height: 28px;
+}
+.card-alerta-topo h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.card-alerta p {
+  font-size: 0.95rem;
+  line-height: 1.45; /* deixa o respiro igual ao do figma */
+  width: 90%; /* concentra o texto como no design */
+  margin: 0 auto; /* centraliza o bloco de texto */
+  text-align: justify; /* dá o efeito visual do figma */
+}
+
+.card-alerta h4 {
+  margin-bottom: 6px;
+}
+
+.card-alerta p {
+  text-wrap: pretty; /* deixa a quebra das linhas mais suave */
+}
+
+/* Cores dos 4 cards */
+.card-rosa {
+  background-color: #ffe4ee;
+}
+
+.card-azul {
+  background-color: #e2f1ff;
+}
+
+.card-verde {
+  background-color: #e4fdee;
+}
+
+.card-amarelo {
+  background-color: #fff4d4;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .grid-alertas {
+    grid-template-columns: 1fr;
+  }
+}
+/* FOOTER */
+.rodape {
+  width: 100%;
+  padding: 40px 0 24px;
+  background-color: #151b3c;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.rodape-container {
   width: 80%;
   max-width: 1120px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
-.rodape .rodape-esquerda {
+
+/* Parte de cima: 3 colunas */
+.rodape-top {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 480px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
 }
-.rodape .rodape-esquerda img {
+
+.rodape-col {
+  flex: 1;
+}
+
+/* Coluna esquerda */
+.rodape-brand img {
   height: 32px;
   width: auto;
+  margin-bottom: 12px;
 }
-.rodape .rodape-esquerda p {
+
+.rodape-slogan {
   font-size: 0.9rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 4px;
+}
+
+.rodape-text {
+  font-size: 0.85rem;
   color: #cbd5f5;
 }
-.rodape .rodape-direita {
+
+/* Coluna links úteis */
+.rodape-links h4,
+.rodape-contato h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #f9fafb;
+}
+
+.rodape-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rodape-links li + li {
+  margin-top: 4px;
+}
+
+.rodape a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+/* Coluna contato */
+.rodape-contato p {
+  margin-bottom: 4px;
   font-size: 0.85rem;
+}
+
+.rodape-emergencia {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #d1d5db;
+}
+
+/* Faixa de baixo */
+.rodape-bottom {
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.78rem;
   color: #9ca3af;
 }
 
-/* Footer responsivo */
-@media (min-width: 900px) {
-  .rodape .rodape-conteudo {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .rodape .rodape-direita {
-    text-align: right;
-  }
+/* Desktop: mantém texto centralizado visualmente parecido com o Figma */
+.rodape-bottom p {
+  text-align: center;
 }
-/* Responsividade geral */
+
+/* RESPONSIVO FOOTER */
 @media (max-width: 900px) {
-  header {
-    height: auto;
-    background-size: cover;
-    background-position: top right;
-  }
-  .box-header {
-    width: 90% !important;
-  }
-  .box-banner {
-    width: 90vw;
-    height: auto;
-    padding: 30px 0;
-  }
-  .box-banner .box-titulo {
-    height: auto;
-  }
-  .box-banner .box-titulo h2 {
-    font-size: 2.2rem;
-  }
-  .secao-exames .box-exames-titulo,
-  .secao-exames .box-prevencao-titulo,
-  .secao-exames .box-alertas-titulo,
-  .secao-prevencao .box-exames-titulo,
-  .secao-prevencao .box-prevencao-titulo,
-  .secao-prevencao .box-alertas-titulo,
-  .secao-alertas .box-exames-titulo,
-  .secao-alertas .box-prevencao-titulo,
-  .secao-alertas .box-alertas-titulo {
+  .rodape-container {
     width: 90%;
   }
-  .secao-exames .cards-exames,
-  .secao-exames .cards-prevencao,
-  .secao-exames .cards-alertas,
-  .secao-prevencao .cards-exames,
-  .secao-prevencao .cards-prevencao,
-  .secao-prevencao .cards-alertas,
-  .secao-alertas .cards-exames,
-  .secao-alertas .cards-prevencao,
-  .secao-alertas .cards-alertas {
-    width: 90%;
+  .rodape-top {
+    flex-direction: column;
+    gap: 24px;
   }
-  .rodape .rodape-conteudo {
-    width: 90%;
+  .rodape-bottom p {
+    text-align: left;
   }
 }
-@media (max-width: 700px) {
+/* AJUSTES FINOS PARA MOBILE  */
+/* 1. Header no celular: sem imagem de fundo e pill certinho */
+@media (max-width: 768px) {
+  header {
+    min-height: auto;
+    padding-top: 24px;
+    background-image: none; /* some com o desenho do lado no mobile */
+  }
   .box-header {
-    flex-direction: column;
+    width: 90%;
+    max-width: 360px; /* deixa a barrinha mais parecida com o Figma */
     height: auto;
-    padding: 10px 0;
+    padding: 8px 16px;
+    margin-top: 16px;
+    border-radius: 999px;
+    gap: 8px;
+    justify-content: space-between;
+  }
+  .box-header img {
+    height: 26px;
   }
   .box-header nav {
-    width: 100%;
-    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap; /* deixa quebrar em duas linhas se precisar */
+    justify-content: flex-end;
+    gap: 4px 8px;
+  }
+  .box-header nav a {
+    font-size: 0.7rem;
+    white-space: normal; /* permite quebra de linha em "Prevenção Feminina" */
+  }
+  /* 2. Texto do hero ocupando melhor a largura e botões lado a lado */
+  .box-banner {
+    width: 90%;
+    max-width: 360px;
+    margin-top: 32px;
+  }
+  .box-banner .box-titulo {
+    max-width: 100%;
+  }
+  .box-banner .box-titulo h2 {
+    font-size: 2rem;
+  }
+  .box-banner .box-titulo p {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+  .box-botoes {
+    margin-top: 20px;
+    justify-content: center; /* centraliza os dois botões */
+    flex-wrap: nowrap; /* tenta manter lado a lado */
+    gap: 12px;
+  }
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    white-space: nowrap; /* não quebra o texto dentro do botão */
+  }
+}
+/* 3. Cards de prevenção mais estreitos no mobile */
+@media (max-width: 768px) {
+  .grid-prevencao-feminina,
+  .grid-prevencao-masculina {
+    width: 90%;
+  }
+  .card-faixa {
+    width: 100%;
+    max-width: 320px; /* fica mais estreito como no Figma mobile */
+    min-height: auto;
+  }
+}
+/* 4. Footer centralizado no mobile */
+@media (max-width: 768px) {
+  .rodape-container {
+    width: 90%;
+    align-items: center;
+  }
+  .rodape-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .rodape-col {
+    width: 100%;
+  }
+  .rodape-contato p,
+  .rodape-text,
+  .rodape-slogan {
+    text-align: center;
+  }
+  .rodape-bottom {
+    align-items: center;
+  }
+  .rodape-bottom p {
+    text-align: center;
+  }
+}
+/* CORREÇÃO DO HEADER MOBILE - NÃO DEIXAR OS LINKS EM CIMA UM DO OUTRO */
+@media (max-width: 768px) {
+  .box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* impede quebrar em linhas */
+    padding: 10px 16px;
     gap: 8px;
-    flex-wrap: wrap;
   }
-  .secao-exames .cards-exames,
-  .secao-alertas .cards-alertas {
-    flex-direction: column;
+  .box-header nav {
+    flex: 1; /* empurra os links para a direita */
+    display: flex;
+    justify-content: flex-end;
   }
-  .secao-prevencao .cards-prevencao {
-    flex-direction: column;
+  .box-header nav ul {
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap; /* impede os links de quebrarem */
   }
-  .secao-prevencao .cards-prevencao .card-prevencao {
-    flex: 1 1 100%;
+  .box-header nav ul li a {
+    font-size: 0.72rem;
+    white-space: nowrap; /* impede o texto quebrar */
+  }
+}
+@media (max-width: 600px) {
+  /* ... o que você já tem aí dentro ... */
+  .box-header {
+    width: 90%;
+    padding-inline: 16px;
+  }
+  .box-header nav {
+    gap: 12px;
+  }
+  .box-header nav a {
+    font-size: 0.7rem; /* pode ajustar se quiser maior ou menor */
+  }
+  /* troca os textos no mobile */
+  .box-header nav a .label-desktop {
+    display: none; /* esconde texto longo */
+  }
+  .box-header nav a .label-mobile {
+    display: inline; /* mostra texto abreviado */
   }
 }/*# sourceMappingURL=style.css.map */
